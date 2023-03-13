@@ -20,7 +20,7 @@ import java.time.LocalDate;
 @Entity
 public class Person {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue
     private Long id;
 
     @NotEmpty(message = "First name can not be empty")
@@ -36,6 +36,8 @@ public class Person {
     @DecimalMin(value = "1000.00", message = "Salary must be at least 1000.00")
     @NotNull(message = "Salary can not be empty")
     private BigDecimal salary;
+
+    private String photoFilename;
 
 
 
