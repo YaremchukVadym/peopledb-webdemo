@@ -1,8 +1,8 @@
 package com.neutrinosys.peopledbweb.biz.model;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 
 @Data
@@ -40,5 +41,9 @@ public class Person {
     private String photoFilename;
 
 
-
+//    public static Person parse(String csvLine) {
+//        String[] fields = csvLine.split(";\\s*");
+//        LocalDate dob = LocalDate.parse(fields[10], DateTimeFormatter.ofPattern("M/d/yyyy"));
+//        return new Person(null, fields[2], fields[4], dob, fields[6], new BigDecimal(fields[17]), null);
+//    }
 }
